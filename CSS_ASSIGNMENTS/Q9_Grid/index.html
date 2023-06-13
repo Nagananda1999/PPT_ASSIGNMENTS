@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-color: #C4EBF9;
+            padding: 15px;
+        }
+        header{
+            font-size: 30px;
+            text-align: center;
+            color: #f5f5f5;
+            background-color: #02BFB1;
+            margin: 30px 0;
+            padding: 15px;
+        }
+        main{
+            height: 70vh;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0px;
+        }
+        aside{
+            flex: 1;
+            margin-right: 100px;
+            background-color: #6EDB6E;
+            color: #f5f5f5;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
+        article{
+            flex: 3;
+            background-color: #FBB04C;
+            color: #f5f5f5;
+            position: relative;
+        }
+        article>h1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .images{
+            /* border: 2px solid; */
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            justify-content: center;
+        }
+        .img{
+            height: 200px;
+            width: 200px;
+            margin: 10px 30px;
+            background-color: #FCD24A;
+            opacity: 0.9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f5f5f5;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>
+        <aside>aside</aside>
+        <article>
+            <h1>article</h1>
+            <div class="images">
+                <div class="img">Image</div>
+                <div class="img">Image</div>
+                <div class="img">Image</div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
