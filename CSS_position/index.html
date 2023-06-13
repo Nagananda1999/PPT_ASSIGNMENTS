@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            border:2px solid black;
+            width: 125px;
+            height: 110px;
+            margin: 10px;
+        }
+        .box1,.box2,.box3,.box4,.box5{
+            display: flex;
+            margin-left: 100px;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>Static</p>
+    <p>No imapct of top,right,bottom and left</p>
+    <div class="box1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <p>Relative</p>
+    <p>Moves from in normal postion to offset value</p>
+    <div class="box2" style="border: 2px solid black;">
+        <div class="box">asas</div>
+        <div class="box" style="position: relative;top: 40px;left: 40px; background-color: yellow;" >
+            position: relative;<br/>top: 40px;<br/>left: 40px;
+        </div>
+        <div class="box"></div>
+    </div>
+    <p>Absolute(parent:relative)</p>
+    <p>Starts at position left:0; & top:0; of parent(not viewport) and then adds offset values</p>
+    <div class="box3" style="position: relative; border: 2px solid black;">
+        <div class="box"></div>
+        <div class="box" style="position: absolute;top: 30px;left: 80px; background-color: yellow;">
+            position: absolute; <br/> top: 50px;<br/>left: 80px;
+        </div>
+        <div class="box"></div>
+    </div>
+    <p>fixed (parent:static)</p>
+    <p>Starts at positions left:0; & top:0; of viewport(containing block) and the adds offset values</p>
+    <div class="box4">
+        <div class="box"></div>
+        <div class="box" style="position: fixed; top:600px; left: 175px; background-color: yellow;">
+            position: fixed;<br/> top:600px; <br/> left: 175px;<br/>
+        </div>
+        <div class="box"></div>
+    </div>
+    <p>sticky</p>
+    <p>position: sticky; top: 300px;</p>
+    <p>Initially position is relative, Once offset reachced on scroll position becomes fixed(at top:300px)</p>
+    <div class="box5" style="position: sticky; top: 300px; background-color: yellow; width: fit-content;">
+        <div class="box"></div>
+        <div class="box"
+        
+        ></div>
+        <div class="box"></div>
+    </div>
+    <div style="padding-bottom: 1000px;" ></div>
+</body>
+</html>
